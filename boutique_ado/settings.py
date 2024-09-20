@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # Optional -- requires install using `django-allauth[socialaccount]`
     'allauth.socialaccount',
     'home',
+    'products',
 ]
 
 SITE_ID = 1
