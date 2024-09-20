@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure-&_!i9cd2i9vwt(m)sp_d_vovplu*4#a!1dc*zr0%!apiz0ftvi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-darthkoder-dksboutiquea-etyfm1fqlbs.ws.codeinstitute-ide.net']
+if DEBUG:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.codeinstitute-ide.net']
+else:
+    heroku_hostname = os.environ.get('HEROKU_HOSTNAME', '')
+    ALLOWED_HOSTS = [heroku_hostname] if heroku_hostname else []
+
 
 
 # Application definition
