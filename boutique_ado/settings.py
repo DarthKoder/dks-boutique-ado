@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     
-    # other
+    # other apps
     
     'crispy_forms',
 ]
@@ -83,8 +83,8 @@ TEMPLATES = [
                 'bag.contexts.bag_contents',
             ],
             'builtins': [
-                'crispy_forms.templatetags.crispy_forms_tags'
-                'crispy_forms.templatetags.crispy_forms_field'
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
             ]
         },
     },
